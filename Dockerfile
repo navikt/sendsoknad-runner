@@ -3,15 +3,15 @@ FROM navikt/common:0.1 AS navikt-common
 FROM openjdk:15-slim AS openjdk-15
 # Default Maven and JDK - can be replaced with eg. maven:3.6.3-openjdk-15-slim when JDK 11 is no longer needed
 FROM maven:3.6.3-openjdk-11-slim
-LABEL maintainer="Team Melosys"
+LABEL maintainer="Team Soknad"
 
 # Can be set as a Docker build-arg, and should have the most recent minor version for deployment on NAIS
 ARG GITHUB_RUNNER_VERSION="2.277.1"
-# GITHUB_TOKEN is set either as a Docker build-arg or when authenticating as https://github.com/apps/melosys-runner/
+# GITHUB_TOKEN is set either as a Docker build-arg or when authenticating as https://github.com/apps/teamsoknad-runner/
 ARG GITHUB_TOKEN=""
 
 ENV GITHUB_OWNER=navikt
-ENV GITHUB_REPOSITORY=melosys-api
+ENV GITHUB_REPOSITORY=sendsoknad
 ENV RUNNER_WORKDIR="_work"
 # Additional labels (replace with your own for local testing)
 ENV RUNNER_LABELS="local"
@@ -35,7 +35,7 @@ ENV LC_ALL="nb_NO.UTF-8"
 ENV LANG="nb_NO.UTF-8"
 ENV TZ="Europe/Oslo"
 
-# Install scripts from https://github.com/navikt/github-apps-support to auth as https://github.com/apps/melosys-runner/
+# Install scripts from https://github.com/navikt/github-apps-support to auth as https://github.com/apps/teamsoknad-runner/
 RUN git clone https://github.com/navikt/github-apps-support.git /github-apps-support \
     && ln -s /github-apps-support/bin/generate-installation-token.sh /usr/bin/generate-installation-token \
     && ln -s /github-apps-support/bin/generate-jwt.sh /usr/bin/generate-jwt

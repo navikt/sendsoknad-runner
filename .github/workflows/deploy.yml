@@ -2,7 +2,7 @@ name: Deploy
 on: push
 
 env:
-  IMAGE: docker.pkg.github.com/${{ github.repository }}/melosys-api-runner:${{ github.sha }}
+  IMAGE: docker.pkg.github.com/${{ github.repository }}/sendsoknad-runner:${{ github.sha }}
 
 jobs:
   build:

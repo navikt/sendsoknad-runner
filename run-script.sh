@@ -1,8 +1,8 @@
 #!/bin/sh
 
 if [ -z "$GITHUB_PAT" ]; then
-    # Use private key from Vault to generate a token for https://github.com/apps/melosys-runner/
-    jwt=$(generate-jwt /var/run/secrets/nais.io/vault/melosys-runner.pem "$APP_ID")
+    # Use private key from Vault to generate a token for https://github.com/apps/teamsoknad-runner/
+    jwt=$(generate-jwt /var/run/secrets/nais.io/vault/teamsoknad-runner.pem "$APP_ID")
     GITHUB_TOKEN=$(generate-installation-token "$jwt")
 fi
 

@@ -1,10 +1,10 @@
 apiVersion: nais.io/v1alpha1
 kind: Application
 metadata:
-  name: melosys-api-runner
-  namespace: teammelosys
+  name: sendsoknad-runner
+  namespace: team-soknad
   labels:
-    team: teammelosys
+    team: team-soknad
 spec:
   image: {{ IMAGE }}
   vault:
