@@ -1,3 +1,5 @@
+Dette er en tilpasset fork av [melosys-api-runner](https://github.com/navikt/melosys-api-runner/)
+
 # GitHub runner for Sendsoknad
 
 Dette prosjektet er et støtteverktøy for [sendsoknad](https://github.com/navikt/sendsoknad); en såkalt
@@ -6,7 +8,7 @@ for å deploye applikasjonen fra GitHub Actions med tilgang til interne ressurse
 skyldes først og fremst Maven-avhengigheter fra intern Nexus (https://repo.adeo.no), hvorav noen få er under aktiv
 utvikling, og ikke kan nås fra utsiden.
 
-Default Java-versjon for runneren er Java 11, men Java 15 er også installert og kan benyttes ved å sette `JAVA_HOME`:
+Default Java-versjon for runneren er Java 8, men Java 11 og 15 er også installert og kan benyttes ved å sette `JAVA_HOME`:
 
 ```
 JAVA_HOME=/usr/local/openjdk-15 mvn package

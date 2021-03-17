@@ -21,4 +21,4 @@ spec:
       memory: 1536Mi
   env:
     - name: RUNNER_LABELS
-      value: {{ CLUSTER }},java-11,java-15
+      value: {{ CLUSTER }},java-8,java-11,java-15

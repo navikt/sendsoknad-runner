@@ -1,8 +1,9 @@
 FROM navikt/common:0.1 AS navikt-common
 # Used to copy /usr/local/openjdk-15 into image for additional JDK
 FROM openjdk:15-slim AS openjdk-15
-# Default Maven and JDK - can be replaced with eg. maven:3.6.3-openjdk-15-slim when JDK 11 is no longer needed
-FROM maven:3.6.3-openjdk-11-slim
+FROM openjdk:11-slim AS openjdk-11
+# Default Maven and JDK - can be replaced with eg. maven:3.6.3-openjdk-15-slim when JDK 8 is no longer needed
+FROM maven:3.6.3-openjdk-8-slim
 LABEL maintainer="Team Soknad"
 
 # Can be set as a Docker build-arg, and should have the most recent minor version for deployment on NAIS
