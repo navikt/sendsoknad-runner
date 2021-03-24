@@ -22,7 +22,7 @@
                         <enabled>true</enabled>
                         <updatePolicy>always</updatePolicy>
                     </snapshots>
-                    <url>https://repo.adeo.no/nexus/repository/public-snapshots</url>
+                    <url>https://repo.adeo.no/repository/public-snapshots</url>
                 </repository>
                 <!-- Det generelle interne Nexus-repoet til NAV (brukes kun internt) -->
                 <repository>
