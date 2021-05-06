@@ -7,7 +7,7 @@ FROM maven:3.6.3-openjdk-8-slim
 LABEL maintainer="Team Soknad"
 
 # Can be set as a Docker build-arg, and should have the most recent minor version for deployment on NAIS
-ARG GITHUB_RUNNER_VERSION="2.277.1"
+ARG GITHUB_RUNNER_VERSION="2.278.0"
 # GITHUB_TOKEN is set either as a Docker build-arg or when authenticating as https://github.com/apps/teamsoknad-runner/
 ARG GITHUB_TOKEN=""
 
